@@ -181,3 +181,87 @@ Three deeper factors influenced Titanic survival:
 1. **Embarkation Port** – Driven by hidden wealth patterns behind each port
 2. **Family Size** – Small families (size 3) had best survival (72%)
 3. **Age Group** – Children were prioritized, seniors struggled most
+
+
+# 📊 Titanic Mini Visualization Dashboard
+### Data Science with Python Internship – Task 4
+
+---
+
+## 📌 Objective
+Build a mini data visualization dashboard on the Titanic dataset
+using 5 distinct chart types to communicate key insights visually.
+
+---
+
+## 📂 Dataset
+- **Source:** [Kaggle – Titanic Dataset](https://www.kaggle.com/c/titanic)
+- **Size:** 891 passengers × 15 columns
+
+---
+
+## 🛠️ Tools & Libraries
+| Tool | Purpose |
+|------|---------|
+| Python | Programming language |
+| Pandas | Data cleaning & feature engineering |
+| Seaborn | Statistical visualizations |
+| Matplotlib | Custom chart styling |
+| Google Colab | Development environment |
+
+---
+
+## 🔍 What I Did
+1. Cleaned missing values (Age → median, Embarked → mode, Deck → dropped)
+2. Engineered 2 new features:
+   - `family_size` = SibSp + Parch
+   - `age_group` = Age bucketed into 5 categories
+3. Built 5 distinct visualizations as a dashboard
+
+---
+
+## 📊 Dashboard Charts
+
+| # | Chart Type | What it shows |
+|---|-----------|---------------|
+| 1 | Histogram | Age distribution with KDE curve |
+| 2 | Bar Chart | Survival rate by class & gender combined |
+| 3 | Boxplot | Fare distribution across passenger classes |
+| 4 | Scatterplot | Age vs Fare colored by survival outcome |
+| 5 | Heatmap | Correlations between all numeric variables |
+
+---
+
+## 💡 Key Insights
+
+### 1. Age Distribution
+- Most passengers were young adults (20–35)
+- Right-skewed distribution — fewer older passengers
+
+### 2. Survival by Class & Gender
+- 1st class females: ~97% survival rate
+- Gender was stronger predictor than class alone
+
+### 3. Fare by Class (Boxplot)
+- 1st class fares ranged wildly (£10–£170+)
+- 3rd class fares were consistently low and clustered
+
+### 4. Age vs Fare (Scatterplot)
+- Higher fare passengers survived more (green dots at top)
+- Age alone didn't predict survival — wealth did
+
+### 5. Correlation Heatmap
+| Variables | Correlation | Meaning |
+|-----------|------------|---------|
+| fare vs pclass | -0.55 | Higher class = more expensive |
+| sibsp vs family_size | 0.89 | Built from same data |
+| survived vs pclass | -0.34 | Lower class = lower survival |
+| survived vs fare | +0.26 | Pricier ticket = better survival |
+
+---
+
+## 🏁 Conclusion
+This dashboard reveals that survival on the Titanic was shaped by:
+1. **Gender** — females survived far more across all classes
+2. **Wealth** — higher fares and better class = better survival odds
+3. **Age** — younger passengers had slight advantages
